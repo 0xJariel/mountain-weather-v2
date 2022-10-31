@@ -1,0 +1,4 @@
+-React
+-Vite
+-react-icons
+-tailwindcss
