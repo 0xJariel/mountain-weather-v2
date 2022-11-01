@@ -13,6 +13,7 @@ function weatherService() {
 	//free version allows from 3hr intervals for forecast
 	const [fullForecast, setFullForecast] = useState({})
 
+	
 	const weatherData = {location, weatherSummary, fullForecast}
 
 	const setDate = (locationOffset) => {

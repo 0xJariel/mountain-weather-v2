@@ -18,6 +18,7 @@ function Navbar(props) {
 		e.preventDefault()
 		setInputLocation(inputLocation)
 		setCurrentLocation(inputLocation)
+
 	}
 
 	const changeTemp = (props) => {
