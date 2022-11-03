@@ -30,13 +30,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -71,4 +64,147 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 15px;
+}
+
+.component {
+	
+}
+
+.search-form {
+	display: grid;
+	grid-template-columns: 60vw 70px;
+	border-radius: 6px;
+	justify-self: center;
+	align-items: center;
+	font-family: 'Open Sans';
+	color: #34485E;
+	font-weight: bold;
+	margin-top: 8px;
+	outline: 2px #34485E solid;
+}
+
+/* input {
+  all: unset;
+} */
+
+.search-input {
+	height: 24px;
+	border: none;
+}
+
+.search-button {
+	justify-self: center;
+}
+
+.input-close {
+	justify-self: st;
+}
+
+
+.location {
+	background: yellow;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.name, .date, .temperature {
+	display: grid;
+	justify-content: center;
+	font-family: 'Open Sans';
+}
+
+.name {
+	font-size: 22px;
+	color: #34485E;
+}
+
+.date {
+	font-size: 16px;
+	color: #94969C;
+}
+
+.temperature {
+	font-size: 96px;
+	color: #34485E;
+	background: rgb(150, 224, 13);
+}
+
+.snow-forecast {
+	background-color: rgb(221, 134, 255);
+	display: grid;
+	grid-template-columns: repeat(10, 20px);
+	grid-gap: 14px;
+	justify-items: center;
+	justify-content: center;
+	align-items: end;
+	height: 100px;
+}
+
+
+.snow-day {
+
+}
+
+
+
+.bar-one {
+	background-color: #34485E;
+	height: 5px;
+	width: 20px;
+}
+
+.bar-two {
+	background-color: #34485E;
+	height: 30px;
+	width: 20px;
+}
+
+.bar-three {
+	background-color: #34485E;
+	height: 40px;
+	width: 20px;
+}
+
+.bar-four {
+	background-color: #34485E;
+	height: 15px;
+	width: 20px;
+}
+.bar-five {
+	background-color: #34485E;
+	height: 0px;
+	width: 20px;
+}
+.bar-six {
+	background-color: #34485E;
+	height: 0px;
+	width: 20px;
+}
+.bar-seven {
+	background-color: #34485E;
+	height: 25px;
+	width: 20px;
+}
+.bar-eight {
+	background-color: #34485E;
+	height: 60px;
+	width: 20px;
+}
+.bar-nine {
+	background-color: #34485E;
+	height: 10px;
+	width: 20px;
+}
+.bar-ten {
+	background-color: #34485E;
+	height: 10px;
+	width: 20px;
 }

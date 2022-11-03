@@ -91,12 +91,131 @@ function App() {
 
 
 	return (
-		<div>
+		<div className="app">
+		<form className="component search-form">
 			
-			<Navbar setCurrentLocation={setCurrentLocation}/>
+			<input className="search-input" type="text" placeholder="location..."></input>
+			<div className="search-button">Search</div>
+		</form>
+		<div className="component location">
+			<div className="name">Beaver Creek</div>
+			<div className="date">Monday Oct 31, 2022</div>
+		</div>
+		<div className="component temperature">
+			<div className="temp">32°</div>
+		</div>
+		<div className="component snow-forecast">
+			<div className="snow-day">
+				<div className="snow-amount inches" >
+					1"
+				</div>
+				<div 
+					className="snow-amount bar-one" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					6"
+				</div>
+				<div 
+					className="snow-amount bar-two" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					8"
+				</div>
+				<div 
+					className="snow-amount bar-three" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					3"
+				</div>
+				<div 
+					className="snow-amount bar-four" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					0"
+				</div>
+				<div 
+					className="snow-amount bar-five" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					0"
+				</div>
+				<div 
+					className="snow-amount bar-six" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					5"
+				</div>
+				<div 
+					className="snow-amount bar-seven" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					12"
+				</div>
+				<div 
+					className="snow-amount bar-eight" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					2"
+				</div>
+				<div 
+					className="snow-amount bar-nine" >
+				</div>
+			</div><div className="snow-day">
+				<div className="snow-amount inches" >
+					2"
+				</div>
+				<div 
+					className="snow-amount bar-ten" >
+				</div>
+			</div>
+		</div>
+		<div className="component todays-summary">
+			<div>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+		</div>
+		<div>
+			{/* <Navbar setCurrentLocation={setCurrentLocation}/>
 			<LocationSummary name={bikiniBottomWeather.name} date={bikiniBottomWeather.date}coordinates={bikiniBottomWeather.coordinates} />
-			<WeatherSummary bikiniBottomWeather={bikiniBottomWeather} />
+			<WeatherSummary bikiniBottomWeather={bikiniBottomWeather} /> */}
     	</div>
+	</div>	
+		
 	);
 }
 

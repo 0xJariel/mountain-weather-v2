@@ -5,20 +5,19 @@ import './WeatherSummary.css';
 
 
 function WeatherSummary(props) {
-	const {name, windSpeed, feelsLike, maxTemp, minTemp, gustSpeed, windDirection} = props.bikiniBottomWeather
+	const {temp, windSpeed, feelsLike, maxTemp, minTemp, gustSpeed, windDirection} = props.bikiniBottomWeather
 
 
 
   return (
 	<div>
-		<div>{name}</div>
-		<div>{feelsLike}</div>
-		<div>{windSpeed}</div>
-		<div>{gustSpeed}</div>
-		<div>{windDirection}</div>
-		<div>{maxTemp}</div>
-		<div>{minTemp}</div>
-		<div>{console.log(props.bikiniBottomWeather)}</div>
+		<div>Temp: {temp}</div>
+		<div>Feels like: {feelsLike}</div>
+		<div>Wind Speed: {windSpeed}</div>
+		<div>Gust Speed: {gustSpeed}</div>
+		<div>Wind Direction: {windDirection}</div>
+		<div>High: {maxTemp}</div>
+		<div>Low: {minTemp}</div>
 	</div>
   )
 }
