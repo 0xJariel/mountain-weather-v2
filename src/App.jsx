@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import DaySelector from './DaySelector/DaySelector';
+import HourlyForecast from './HourlyForecast/HourlyForecast';
 import LocationSummary from './LocationSummary/LocationSummary';
 import Navbar from './Navbar/Navbar';
+import SnowForecast from './SnowForecast/SnowForecast';
 import WeatherSummary from './WeatherSummary/WeatherSummary';
 
 function App() {
@@ -52,7 +55,7 @@ function App() {
 
 		// await setBikiniBottomWeather(fullWeatherData)
 		
-		const setDate = (locationOffset) => {
+		const formatDate = (locationOffset) => {
 			const todaysDate = new Date()
 			const localTime = todaysDate.getTime()
 			const localOffset = todaysDate.getTimezoneOffset() * 60000
@@ -64,7 +67,7 @@ function App() {
 		}	
 
 		await setBikiniBottomWeather({name: `${basicData.name}`, 
-								date: `${setDate(basicData.timezone)}`, 
+								date: `${formatDate(basicData.timezone)}`, 
 								coordinates: {lon: `${basicData.coord.lon}`, lat: `${basicData.coord.lat}`},
 								temp: basicData.main.temp,
 								maxTemp: basicData.main.temp_max,
@@ -76,10 +79,10 @@ function App() {
 								windDirection: basicData.wind.deg,
 								humidity: basicData.main.humidity,
 								forecast: fullWeatherData.list
-								
 							})
 		//api. => html response
 		console.log(basicData)
+
 
 		}
 		catch (e) {
@@ -92,143 +95,18 @@ function App() {
 
 	return (
 		<div className="app">
-		<form className="component search-form">
-			
-			<input className="search-input" type="text" placeholder="location..."></input>
-			<div className="search-button">Search</div>
-		</form>
-		<div className="component location">
-			<div className="name">Beaver Creek</div>
-			<div className="date">Monday Oct 31, 2022</div>
-		</div>
-		<div className="component temperature">
-			<div className="temp">32°</div>
-		</div>
-		<div className="component snow-forecast">
-			<div className="snow-day">
-				<div className="snow-amount inches" >
-					1"
-				</div>
-				<div 
-					className="snow-amount bar-one" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					6"
-				</div>
-				<div 
-					className="snow-amount bar-two" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					8"
-				</div>
-				<div 
-					className="snow-amount bar-three" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					3"
-				</div>
-				<div 
-					className="snow-amount bar-four" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					0"
-				</div>
-				<div 
-					className="snow-amount bar-five" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					0"
-				</div>
-				<div 
-					className="snow-amount bar-six" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					5"
-				</div>
-				<div 
-					className="snow-amount bar-seven" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					12"
-				</div>
-				<div 
-					className="snow-amount bar-eight" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					2"
-				</div>
-				<div 
-					className="snow-amount bar-nine" >
-				</div>
-			</div><div className="snow-day">
-				<div className="snow-amount inches" >
-					2"
-				</div>
-				<div 
-					className="snow-amount bar-ten" >
-				</div>
-			</div>
-		</div>
-		<div className="component day-selector">
-				<div>
-					<div>day</div>
-					<div>icon</div>
-					<div>date</div>
-				</div>
-			</div>
-		<div className="component todays-summary">
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-			<div className='summary-square'>
-				<div>logo</div>
-				<div>description</div>
-				<div>value</div>			
-			</div>
-		</div>
-		<div className="component hourly-temp">
-				<div>
-					<div>weather icon</div>
-					<div>time</div>
-					<div>line</div>
-					<div>temp</div>
-				</div>
-			</div>
-		<div>
-			{/* <Navbar setCurrentLocation={setCurrentLocation}/>
-			<LocationSummary name={bikiniBottomWeather.name} date={bikiniBottomWeather.date}coordinates={bikiniBottomWeather.coordinates} />
-			<WeatherSummary bikiniBottomWeather={bikiniBottomWeather} /> */}
-    	</div>
+			{console.log(bikiniBottomWeather)}
+			<Navbar setCurrentLocation={setCurrentLocation}/>
+			<LocationSummary name={bikiniBottomWeather.name} date={bikiniBottomWeather.date} />
+			<WeatherSummary bikiniBottomWeather={bikiniBottomWeather} />
+			<SnowForecast />
+			<DaySelector />
+			<HourlyForecast forecast={bikiniBottomWeather.forecast}/>
+			<div>
+				{/* <Navbar setCurrentLocation={setCurrentLocation}/>
+				<LocationSummary name={bikiniBottomWeather.name} date={bikiniBottomWeather.date}coordinates={bikiniBottomWeather.coordinates} />
+				<WeatherSummary bikiniBottomWeather={bikiniBottomWeather} /> */}
+    		</div>
 	</div>	
 		
 	);

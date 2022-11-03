@@ -21,28 +21,27 @@ function Navbar(props) {
 
 	}
 
-	const changeTemp = (props) => {
+	const changeTemp = (e) => {
+		e.preventDefault()
 		console.log('changing temp')
 	}
 
-	const changeSpeed = () => {
+	const changeSpeed = (e) => {
+		e.preventDefault()
 		console.log('changing speed')
 	}
 
 	return (
-		<div className='navbar'>
-			
-			<form onSubmit={handleSubmit}>
+			<form className="component Navbar" onSubmit={handleSubmit}>
 				<input 
-					onChange={handleLocationChange}
-					placeholder='Destination ...'/>
-				<button><MdSearch /></button>
+					className="search-input" 
+					type="text" placeholder="location..."
+					onChange={handleLocationChange}></input>
+				<div className="search-button" onClick={handleSubmit}><MdSearch /></div>
+				{/* <div>Temp: <button onClick={changeTemp}>F°</button></div>
+				<div>Speed: <button onClick={changeSpeed}>mph</button></div> */}
 			</form>
-			{/* <div><MdOutlineLocationSearching size={18} /></div>
-			<div>Temp: <button onClick={changeTemp}>F°</button></div>
-			<div>Speed: <button onClick={changeSpeed}>mph</button></div> */}
-		</div>
-	)
+			)
 }
 
 export default Navbar

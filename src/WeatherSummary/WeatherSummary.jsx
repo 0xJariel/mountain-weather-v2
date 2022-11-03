@@ -11,13 +11,35 @@ function WeatherSummary(props) {
 
   return (
 	<div>
-		<div>Temp: {temp}</div>
-		<div>Feels like: {feelsLike}</div>
-		<div>Wind Speed: {windSpeed}</div>
-		<div>Gust Speed: {gustSpeed}</div>
-		<div>Wind Direction: {windDirection}</div>
-		<div>High: {maxTemp}</div>
-		<div>Low: {minTemp}</div>
+		<div className="component temperature">
+			<div className="temp">32°</div>
+		</div>
+		<div className="component todays-summary">
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>{temp}</div>			
+			</div>
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>Feels like: <span>{feelsLike}</span></div>
+			</div>
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>Wind Speed: <span>{windSpeed}</span></div>			
+			</div>
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>Gust Speed: <span>{gustSpeed}</span></div></div>		
+			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>Wind Direction: <span>{windDirection}</span></div>		
+			</div>		
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>Feels like: <span>{feelsLike}</span></div>				
+			</div>
+		</div>
 	</div>
   )
 }

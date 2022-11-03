@@ -79,7 +79,7 @@ button:focus {
 	
 }
 
-.search-form {
+.Navbar {
 	display: grid;
 	grid-template-columns: 60vw 70px;
 	border-radius: 6px;

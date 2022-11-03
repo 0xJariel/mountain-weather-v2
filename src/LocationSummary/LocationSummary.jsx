@@ -6,11 +6,9 @@ import { useState } from 'react';
 function LocationSummary(props) {
 
   return (
-	
-	<div>
-		<div>{props.name}</div>
-		<div>{JSON.stringify(props.coordinates)}</div>
-		<div>{props.date}</div>
+	<div className="component LocationSummary">
+			<div className="name">{props.name}</div>
+			<div className="date">{props.date}</div>
 	</div>
   )
 }
