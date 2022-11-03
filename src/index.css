@@ -43,11 +43,12 @@ picture {
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -69,7 +70,9 @@ select {
 .app {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-row-gap: 15px;
+	grid-row-gap: 8px;
+  grid-auto-rows: auto;
+  background-color: aqua;
 }
 
 .component {
@@ -86,8 +89,12 @@ select {
 	color: #34485E;
 	font-weight: bold;
 	margin-top: 8px;
-	outline: 2px #34485E solid;
+  outline: none;
+	/* outline: 2px #34485E solid; */
+
+  
 }
+
 
 /* input {
   all: unset;
@@ -108,7 +115,6 @@ select {
 
 
 .location {
-	background: yellow;
 	display: grid;
 	justify-content: center;
 	align-items: center;
@@ -134,11 +140,9 @@ select {
 .temperature {
 	font-size: 96px;
 	color: #34485E;
-	background: rgb(150, 224, 13);
 }
 
 .snow-forecast {
-	background-color: rgb(221, 134, 255);
 	display: grid;
 	grid-template-columns: repeat(10, 20px);
 	grid-gap: 14px;
@@ -207,4 +211,19 @@ select {
 	background-color: #34485E;
 	height: 10px;
 	width: 20px;
+}
+
+
+
+.todays-summary {
+  display: grid;
+  margin-top: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.summary-square {
+  display: flex;
+ 
 }

@@ -177,38 +177,53 @@ function App() {
 				</div>
 			</div>
 		</div>
+		<div className="component day-selector">
+				<div>
+					<div>day</div>
+					<div>icon</div>
+					<div>date</div>
+				</div>
+			</div>
 		<div className="component todays-summary">
-			<div>
+			<div className='summary-square'>
 				<div>logo</div>
 				<div>description</div>
 				<div>value</div>			
 			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
 			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
 			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
 			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
 			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>			
+			<div className='summary-square'>
+				<div>logo</div>
+				<div>description</div>
+				<div>value</div>			
 			</div>
 		</div>
+		<div className="component hourly-temp">
+				<div>
+					<div>weather icon</div>
+					<div>time</div>
+					<div>line</div>
+					<div>temp</div>
+				</div>
+			</div>
 		<div>
 			{/* <Navbar setCurrentLocation={setCurrentLocation}/>
 			<LocationSummary name={bikiniBottomWeather.name} date={bikiniBottomWeather.date}coordinates={bikiniBottomWeather.coordinates} />
